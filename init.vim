@@ -39,17 +39,23 @@ let mapleader = " "
 
 " Maps
 nnoremap <leader>ps :Files<cr>
-nmap <leader>f <Plug>(easymotion-bd-f)
+nmap <leader>f <plug>(easymotion-bd-f)
 inoremap ( ()<left>
+inoremap <expr> ) strpart(getline("."), col(".") - 1, 1) == ")" ? "<right>" : ")"
 inoremap [ []<left>
+inoremap <expr> ] strpart(getline("."), col(".") - 1, 1) == "]" ? "<right>" : "]"
 inoremap { {}<left>
+inoremap <expr> } strpart(getline("."), col(".") - 1, 1) == "}" ? "<right>" : "}"
+inoremap <expr> ' strpart(getline("."), col(".")-1, 1) == "'" ? "<right>" : "''<left>"
+inoremap <expr> " strpart(getline("."), col(".")-1, 1) == '"' ? "<right>" : '""<left>'
+
 
 " Auto commands
 augroup easymotion_coc_fix
     autocmd!
     autocmd User EasyMotionPromptBegin silent! CocDisable
     autocmd User EasyMotionPromptEnd silent! CocEnable
-augroup END
+augroup end
 
 " Sources
 source $HOME/.config/nvim/plugins/config/coc.vim
