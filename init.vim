@@ -19,7 +19,6 @@ set noswapfile
 set nobackup
 set nowritebackup
 set incsearch
-set spell
 
 " Plugins
 call plug#begin("~/.config/nvim/plugins")
@@ -39,7 +38,7 @@ highlight Normal guibg=none ctermbg=none
 let mapleader = " "
 
 " Maps
-nnoremap <leader>ps :Files<enter>
+nnoremap <leader>ps :Files<cr>
 nmap <leader>f <Plug>(easymotion-bd-f)
 inoremap ( ()<left>
 inoremap [ []<left>
