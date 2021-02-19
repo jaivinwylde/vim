@@ -38,8 +38,9 @@ highlight Normal guibg=none ctermbg=none
 let mapleader = " "
 
 " Maps
-nnoremap <leader>ps :Files<cr>
+nnoremap <leader>p :Files<cr>
 nmap <leader>f <plug>(easymotion-bd-f)
+
 inoremap ( ()<left>
 inoremap <expr> ) strpart(getline("."), col(".") - 1, 1) == ")" ? "<right>" : ")"
 inoremap [ []<left>
@@ -48,7 +49,7 @@ inoremap { {}<left>
 inoremap <expr> } strpart(getline("."), col(".") - 1, 1) == "}" ? "<right>" : "}"
 inoremap <expr> ' strpart(getline("."), col(".")-1, 1) == "'" ? "<right>" : "''<left>"
 inoremap <expr> " strpart(getline("."), col(".")-1, 1) == '"' ? "<right>" : '""<left>'
-
+inoremap <expr> ` strpart(getline("."), col(".")-1, 1) == "`" ? "<right>" : "``<left>"
 
 " Auto commands
 augroup easymotion_coc_fix
