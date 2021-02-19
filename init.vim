@@ -45,15 +45,15 @@ endfunction
 nnoremap <leader>p :Files<cr>
 nmap <leader>f <plug>(easymotion-bd-f)
 
-vnoremap <leader>( xi()<Esc>P
+vnoremap ( xi()<Esc>P
 inoremap ( ()<left>
 inoremap <expr> ) CurrentChar() == ")" ? "<right>" : ")"
 
-vnoremap <leader>[ xi[]<Esc>P
+vnoremap [ xi[]<Esc>P
 inoremap [ []<left>
 inoremap <expr> ] CurrentChar() == "]" ? "<right>" : "]"
 
-vnoremap <leader>{ xi{}<Esc>P
+vnoremap { xi{}<Esc>P
 inoremap { {}<left>
 inoremap <expr> } CurrentChar() == "}" ? "<right>" : "}"
 
