@@ -1,0 +1,17 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "markdown",
+        "javascript",
+        "graphql",
+        "html",
+        "yaml",
+        "json",
+        "python"
+    ],
+    "python.pythonPath": "python3",
+    "python.linting.flake8Enabled": true,
+    "yank.highlight.enable": true,
+    "yank.highlight.duration": 300,
+    "yank.enableCompletion": false
+}
