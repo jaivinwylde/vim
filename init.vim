@@ -37,25 +37,29 @@ highlight Normal guibg=none ctermbg=none
 
 let mapleader = " "
 
+function! CurrentChar()
+    return strpart(getline("."), col(".") - 1, 1)
+endfunction
+
 " Maps
 nnoremap <leader>p :Files<cr>
 nmap <leader>f <plug>(easymotion-bd-f)
 
+vnoremap <leader>( xi()<Esc>P
 inoremap ( ()<left>
-inoremap <expr> ) strpart(getline("."),
-         \ col(".") - 1, 1) == ")" ? "<right>" : ")"
+inoremap <expr> ) CurrentChar() == ")" ? "<right>" : ")"
+
+vnoremap <leader>[ xi[]<Esc>P
 inoremap [ []<left>
-inoremap <expr> ] strpart(getline("."),
-         \ col(".") - 1, 1) == "]" ? "<right>" : "]"
+inoremap <expr> ] CurrentChar() == "]" ? "<right>" : "]"
+
+vnoremap <leader>{ xi{}<Esc>P
 inoremap { {}<left>
-inoremap <expr> } strpart(getline("."),
-         \ col(".") - 1, 1) == "}" ? "<right>" : "}"
-inoremap <expr> ' strpart(getline("."),
-         \ col(".")-1, 1) == "'" ? "<right>" : "''<left>"
-inoremap <expr> " strpart(getline("."),
-         \ col(".")-1, 1) == '"' ? "<right>" : '""<left>'
-inoremap <expr> ` strpart(getline("."),
-         \ col(".")-1, 1) == "`" ? "<right>" : "``<left>"
+inoremap <expr> } CurrentChar() == "}" ? "<right>" : "}"
+
+inoremap <expr> ' CurrentChar() == "'" ? "<right>" : "''<left>"
+inoremap <expr> " CurrentChar() == '"' ? "<right>" : '""<left>'
+inoremap <expr> ` CurrentChar() == "`" ? "<right>" : "``<left>"
 
 " Auto commands
 augroup easymotion_coc_fix
