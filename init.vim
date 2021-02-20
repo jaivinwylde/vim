@@ -44,6 +44,7 @@ endfunction
 " Maps
 nnoremap <leader>p :Files<cr>
 nmap <leader>f <plug>(easymotion-bd-f)
+inoremap <c-l> <bs><del>
 
 vnoremap ( xi()<Esc>P
 inoremap ( ()<left>
@@ -57,13 +58,8 @@ vnoremap { xi{}<Esc>P
 inoremap { {}<left>
 inoremap <expr> } CurrentChar() == "}" ? "<right>" : "}"
 
-vnoremap " xi""<Esc>P
 inoremap <expr> " CurrentChar() == '"' ? "<right>" : '""<left>'
-
-vnoremap ' xi''<Esc>P
 inoremap <expr> ' CurrentChar() == "'" ? "<right>" : "''<left>"
-
-vnoremap ` xi``<Esc>P
 inoremap <expr> ` CurrentChar() == "`" ? "<right>" : "``<left>"
 
 " Auto commands
