@@ -57,8 +57,13 @@ vnoremap { xi{}<Esc>P
 inoremap { {}<left>
 inoremap <expr> } CurrentChar() == "}" ? "<right>" : "}"
 
-inoremap <expr> ' CurrentChar() == "'" ? "<right>" : "''<left>"
+vnoremap " xi""<Esc>P
 inoremap <expr> " CurrentChar() == '"' ? "<right>" : '""<left>'
+
+vnoremap ' xi''<Esc>P
+inoremap <expr> ' CurrentChar() == "'" ? "<right>" : "''<left>"
+
+vnoremap ` xi``<Esc>P
 inoremap <expr> ` CurrentChar() == "`" ? "<right>" : "``<left>"
 
 " Auto commands
