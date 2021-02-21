@@ -24,6 +24,7 @@ set incsearch
 call plug#begin("~/.config/nvim/plugins")
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -32,6 +33,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Color scheme
+lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
+
 colorscheme gruvbox
 highlight Normal guibg=none ctermbg=none
 
