@@ -49,6 +49,13 @@ endfunction
 " Maps
 nnoremap <leader>p :Files<cr>
 nmap <leader>f <plug>(easymotion-bd-f)
+nmap <leader>rn <plug>(coc-rename)
+nmap <silent> [g <plug>(coc-diagnostic-prev)
+nmap <silent> ]g <plug>(coc-diagnostic-next)
+nmap <silent> <leader>gd <plug>(coc-definition)
+nmap <silent> <leader>gy <plug>(coc-type-definition)
+nmap <silent> <leader>gi <plug>(coc-implementation)
+nmap <silent> <leader>gr <plug>(coc-references)
 inoremap <c-l> <bs><del>
 
 vnoremap ( xi()<Esc>P
