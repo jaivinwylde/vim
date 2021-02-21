@@ -58,15 +58,15 @@ nmap <silent> <leader>gi <plug>(coc-implementation)
 nmap <silent> <leader>gr <plug>(coc-references)
 inoremap <c-l> <bs><del>
 
-vnoremap ( xi()<Esc>P
+vnoremap ( xa()<Esc>P
 inoremap ( ()<left>
 inoremap <expr> ) CurrentChar() == ")" ? "<right>" : ")"
 
-vnoremap [ xi[]<Esc>P
+vnoremap [ xa[]<Esc>P
 inoremap [ []<left>
 inoremap <expr> ] CurrentChar() == "]" ? "<right>" : "]"
 
-vnoremap { xi{}<Esc>P
+vnoremap { xa{}<Esc>P
 inoremap { {}<left>
 inoremap <expr> } CurrentChar() == "}" ? "<right>" : "}"
 
