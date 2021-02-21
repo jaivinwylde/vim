@@ -58,20 +58,25 @@ nmap <silent> <leader>gi <plug>(coc-implementation)
 nmap <silent> <leader>gr <plug>(coc-references)
 inoremap <c-l> <bs><del>
 
-vnoremap ( xa()<Esc>P
+vnoremap <leader>( xa()<Esc>P
 inoremap ( ()<left>
 inoremap <expr> ) CurrentChar() == ")" ? "<right>" : ")"
 
-vnoremap [ xa[]<Esc>P
+vnoremap <leader>[ xa[]<Esc>P
 inoremap [ []<left>
 inoremap <expr> ] CurrentChar() == "]" ? "<right>" : "]"
 
-vnoremap { xa{}<Esc>P
+vnoremap <leader>{ xa{}<Esc>P
 inoremap { {}<left>
 inoremap <expr> } CurrentChar() == "}" ? "<right>" : "}"
 
+vnoremap <leader>" xa""<Esc>P
 inoremap <expr> " CurrentChar() == '"' ? "<right>" : '""<left>'
+
+vnoremap <leader>' xa''<Esc>P
 inoremap <expr> ' CurrentChar() == "'" ? "<right>" : "''<left>"
+
+vnoremap <leader>` xa``<Esc>P
 inoremap <expr> ` CurrentChar() == "`" ? "<right>" : "``<left>"
 
 " Auto commands
