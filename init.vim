@@ -35,6 +35,8 @@ call plug#end()
 " Color scheme
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 
+let g:gruvbox_contrast_dark = "hard"
+
 colorscheme gruvbox
 highlight Normal guibg=none ctermbg=none
 
