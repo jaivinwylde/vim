@@ -42,10 +42,6 @@ highlight Normal guibg=none ctermbg=none
 
 let mapleader = " "
 
-function! CurrentChar()
-    return strpart(getline("."), col(".") - 1, 1)
-endfunction
-
 " Maps
 nnoremap <leader>p :Files<cr>
 nmap <leader>f <plug>(easymotion-bd-f)
@@ -56,28 +52,6 @@ nmap <silent> <leader>gd <plug>(coc-definition)
 nmap <silent> <leader>gy <plug>(coc-type-definition)
 nmap <silent> <leader>gi <plug>(coc-implementation)
 nmap <silent> <leader>gr <plug>(coc-references)
-inoremap <c-l> <bs><del>
-
-vnoremap <leader>( xa()<Esc>P
-inoremap ( ()<left>
-inoremap <expr> ) CurrentChar() == ")" ? "<right>" : ")"
-
-vnoremap <leader>[ xa[]<Esc>P
-inoremap [ []<left>
-inoremap <expr> ] CurrentChar() == "]" ? "<right>" : "]"
-
-vnoremap <leader>{ xa{}<Esc>P
-inoremap { {}<left>
-inoremap <expr> } CurrentChar() == "}" ? "<right>" : "}"
-
-vnoremap <leader>" xa""<Esc>P
-inoremap <expr> " CurrentChar() == '"' ? "<right>" : '""<left>'
-
-vnoremap <leader>' xa''<Esc>P
-inoremap <expr> ' CurrentChar() == "'" ? "<right>" : "''<left>"
-
-vnoremap <leader>` xa``<Esc>P
-inoremap <expr> ` CurrentChar() == "`" ? "<right>" : "``<left>"
 
 " Auto commands
 augroup easymotion_coc_fix
