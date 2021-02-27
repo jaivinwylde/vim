@@ -19,12 +19,13 @@ set noswapfile
 set nobackup
 set nowritebackup
 set incsearch
+set nocompatible
 
 " Plugins
 call plug#begin("~/.config/nvim/plugins")
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'sheerun/vim-polyglot'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -33,8 +34,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " Color scheme
-lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
-
 let g:gruvbox_contrast_dark = "hard"
 
 colorscheme gruvbox
