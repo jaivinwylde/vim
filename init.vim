@@ -21,6 +21,8 @@ set nowritebackup
 set incsearch
 set nocompatible
 
+let g:polyglot_disabled = ['autoindent']
+
 " Plugins
 call plug#begin("~/.config/nvim/plugins")
 Plug 'gruvbox-community/gruvbox'
@@ -40,7 +42,6 @@ colorscheme gruvbox
 highlight Normal guibg=none ctermbg=none
 
 let mapleader = " "
-let g:polyglot_disabled = ['autoindent']
 
 " Maps
 nnoremap <leader>p :Files<cr>
