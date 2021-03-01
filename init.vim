@@ -2,7 +2,7 @@
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set scrolloff=8
+set scrolloff=20
 set colorcolumn=80
 set signcolumn=yes
 set guicursor=
@@ -40,6 +40,7 @@ colorscheme gruvbox
 highlight Normal guibg=none ctermbg=none
 
 let mapleader = " "
+let g:polyglot_disabled = ['autoindent']
 
 " Maps
 nnoremap <leader>p :Files<cr>
