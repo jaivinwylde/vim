@@ -46,6 +46,7 @@ let mapleader = " "
 " Maps
 nnoremap <leader>p :Files<cr>
 nmap <leader>f <plug>(easymotion-bd-f)
+nmap <leader>l <plug>(easymotion-bd-jk)
 nmap <leader>rn <plug>(coc-rename)
 nmap <silent> [g <plug>(coc-diagnostic-prev)
 nmap <silent> ]g <plug>(coc-diagnostic-next)
