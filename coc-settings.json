@@ -11,6 +11,7 @@
     ],
     "python.pythonPath": "python3",
     "python.linting.flake8Enabled": true,
+    "diagnostic.showUnused": false,
     "yank.highlight.enable": true,
     "yank.highlight.duration": 300,
     "yank.enableCompletion": false

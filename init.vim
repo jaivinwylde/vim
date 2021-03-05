@@ -1,4 +1,4 @@
-" Sets
+" sets
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -23,8 +23,10 @@ set nocompatible
 
 let g:polyglot_disabled = ['autoindent']
 
-" Plugins
+" plugins
 call plug#begin("~/.config/nvim/plugins")
+Plug 'ThePrimeagen/vim-be-good'
+
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
@@ -35,31 +37,30 @@ Plug 'easymotion/vim-easymotion'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-" Color scheme
+" color scheme
 let g:gruvbox_contrast_dark = "hard"
 
 colorscheme gruvbox
 
 let mapleader = " "
 
-" Maps
-nnoremap <leader>p :Files<cr>
+" maps
+nnoremap <leader>p :GFiles<cr>
 nmap <leader>f <plug>(easymotion-bd-f)
-nmap <leader>l <plug>(easymotion-bd-jk)
 nmap <leader>rn <plug>(coc-rename)
-nmap <silent> [g <plug>(coc-diagnostic-prev)
-nmap <silent> ]g <plug>(coc-diagnostic-next)
-nmap <silent> <leader>gd <plug>(coc-definition)
-nmap <silent> <leader>gy <plug>(coc-type-definition)
-nmap <silent> <leader>gi <plug>(coc-implementation)
-nmap <silent> <leader>gr <plug>(coc-references)
+nmap [g <plug>(coc-diagnostic-prev)
+nmap ]g <plug>(coc-diagnostic-next)
+nmap <leader>gd <plug>(coc-definition)
+nmap <leader>gy <plug>(coc-type-definition)
+nmap <leader>gi <plug>(coc-implementation)
+nmap <leader>gr <plug>(coc-references)
 
-" Auto commands
+" auto commands
 augroup easymotion_coc_fix
     autocmd!
     autocmd User EasyMotionPromptBegin silent! CocDisable
     autocmd User EasyMotionPromptEnd silent! CocEnable
 augroup end
 
-" Sources
+" sources
 source $HOME/.config/nvim/plugins/config/coc.vim
