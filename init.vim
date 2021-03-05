@@ -12,13 +12,15 @@ set smartindent
 set relativenumber
 set nu
 set nohlsearch
+set incsearch
+set ignorecase
+set smartcase
 set hidden
 set noerrorbells
 set nowrap
 set noswapfile
 set nobackup
 set nowritebackup
-set incsearch
 set nocompatible
 
 let g:polyglot_disabled = ['autoindent']
