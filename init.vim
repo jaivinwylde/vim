@@ -59,8 +59,10 @@ nmap <leader>gi <plug>(coc-implementation)
 nmap <leader>gr <plug>(coc-references)
 
 cnoremap <silent> ;t <cr>:t''<cr>
+cnoremap <silent> ;T <cr>:t''-1<cr>
 cnoremap <silent> ;m <cr>:m''<cr>
-cnoremap <silent> ;d <cr>:d<cr>``
+cnoremap <silent> ;M <cr>:m''-1<cr>
+cnoremap <silent> ;d <cr>:d<cr>''
 
 " auto commands
 augroup easymotion_coc_fix
