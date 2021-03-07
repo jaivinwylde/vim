@@ -24,7 +24,7 @@ set nobackup
 set nowritebackup
 set nocompatible
 
-let g:polyglot_disabled = ['autoindent']
+let g:polyglot_disabled = ["autoindent"]
 
 " plugins
 call plug#begin("~/.config/nvim/plugins")
@@ -49,7 +49,7 @@ highlight Normal guibg=none ctermbg=none
 let mapleader = " "
 
 " maps
-nnoremap <leader>p :GFiles<cr>
+nnoremap <leader>p :Files<cr>
 nmap <leader>f <plug>(easymotion-bd-f)
 nmap <leader>rn <plug>(coc-rename)
 nmap [g <plug>(coc-diagnostic-prev)
