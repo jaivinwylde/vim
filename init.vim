@@ -36,7 +36,6 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'easymotion/vim-easymotion'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
@@ -50,7 +49,6 @@ let mapleader = " "
 
 " maps
 nnoremap <leader>p :Files<cr>
-nmap <leader>f <plug>(easymotion-bd-f)
 nmap <leader>rn <plug>(coc-rename)
 nmap [g <plug>(coc-diagnostic-prev)
 nmap ]g <plug>(coc-diagnostic-next)
