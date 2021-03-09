@@ -64,9 +64,10 @@ cnoremap <silent> ;t <cr>:t''<cr>
 cnoremap <silent> ;T <cr>:t''-1<cr>
 cnoremap <silent> ;m <cr>:m''<cr>
 cnoremap <silent> ;M <cr>:m''-1<cr>
-cnoremap <silent> ;d <cr>:d<cr>''
+cnoremap <silent> ;d <cr>dd<cr>''
 
-command! ClearReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
+command! ClearReg for i in range(34,122) | silent! 
+            \ call setreg(nr2char(i), []) | endfor
 
 " sources
 source $HOME/.config/nvim/plugins/config/coc.vim
