@@ -66,12 +66,5 @@ cnoremap <silent> ;m <cr>:m''<cr>
 cnoremap <silent> ;M <cr>:m''-1<cr>
 cnoremap <silent> ;d <cr>:d<cr>''
 
-" auto commands
-augroup easymotion_coc_fix
-    autocmd!
-    autocmd User EasyMotionPromptBegin silent! CocDisable
-    autocmd User EasyMotionPromptEnd silent! CocEnable
-augroup end
-
 " sources
 source $HOME/.config/nvim/plugins/config/coc.vim
