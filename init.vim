@@ -59,6 +59,7 @@ nmap <leader>gd <plug>(coc-definition)
 nmap <leader>gy <plug>(coc-type-definition)
 nmap <leader>gi <plug>(coc-implementation)
 nmap <leader>gr <plug>(coc-references)
+nmap <leader>gs :G<cr>
 
 cnoremap <silent> ;t <cr>:t''<cr>
 cnoremap <silent> ;T <cr>:t''-1<cr>
@@ -66,6 +67,7 @@ cnoremap <silent> ;m <cr>:m''<cr>
 cnoremap <silent> ;M <cr>:m''-1<cr>
 cnoremap <silent> ;d <cr>dd<cr>''
 
+" commands
 command! ClearReg for i in range(34,122) | silent! 
             \ call setreg(nr2char(i), []) | endfor
 
