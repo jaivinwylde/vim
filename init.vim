@@ -28,27 +28,27 @@ let g:polyglot_disabled = ["autoindent"]
 
 " plugins
 call plug#begin("~/.config/nvim/plugins")
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
 Plug 'ThePrimeagen/vim-be-good'
 
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
 
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-" color scheme
+let mapleader = " "
 let g:gruvbox_contrast_dark = "hard"
 
+" color scheme
 colorscheme gruvbox
 highlight Normal guibg=none ctermbg=none
-
-let mapleader = " "
 
 " maps
 nnoremap <leader>p :Files<cr>
