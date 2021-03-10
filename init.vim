@@ -25,6 +25,8 @@ set nowritebackup
 set nocompatible
 
 let g:polyglot_disabled = ["autoindent"]
+let mapleader = " "
+let g:gruvbox_contrast_dark = "hard"
 
 " plugins
 call plug#begin("~/.config/nvim/plugins")
@@ -43,15 +45,13 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-let mapleader = " "
-let g:gruvbox_contrast_dark = "hard"
-
 " color scheme
 colorscheme gruvbox
 highlight Normal guibg=none ctermbg=none
 
 " maps
-nnoremap <leader>p :Files<cr>
+nnoremap <leader>ps :Files<cr>
+nnoremap <leader>pg :Ag<cr>
 nmap <leader>rn <plug>(coc-rename)
 nmap [g <plug>(coc-diagnostic-prev)
 nmap ]g <plug>(coc-diagnostic-next)
@@ -68,7 +68,7 @@ cnoremap <silent> ;M <cr>:m''-1<cr>
 cnoremap <silent> ;d <cr>dd<cr>''
 
 " commands
-command! ClearReg for i in range(34,122) | silent! 
+command! ClearReg for i in range(34,122) | silent!
             \ call setreg(nr2char(i), []) | endfor
 
 " sources
