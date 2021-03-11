@@ -10,7 +10,9 @@
         "python"
     ],
     "python.pythonPath": "python3",
+    "pyright.disableDiagnostics": true,
     "python.linting.flake8Enabled": true,
+    "python.linting.mypyEnabled": true,
     "diagnostic.showUnused": false,
     "yank.highlight.enable": true,
     "yank.highlight.duration": 300,
