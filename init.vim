@@ -61,11 +61,13 @@ nmap <leader>gi <plug>(coc-implementation)
 nmap <leader>gr <plug>(coc-references)
 nmap <leader>gs :G<cr>
 
-cnoremap <silent> ;t <cr>:t''<cr>
-cnoremap <silent> ;T <cr>:t''-1<cr>
-cnoremap <silent> ;m <cr>:m''<cr>
-cnoremap <silent> ;M <cr>:m''-1<cr>
-cnoremap <silent> ;d <cr>dd<cr>''
+nnoremap <leader>sc :set spell<cr> z= 1<cr> :set nospell<cr>
+
+cnoremap ;t <cr>:t''<cr>
+cnoremap ;T <cr>:t''-1<cr>
+cnoremap ;m <cr>:m''<cr>
+cnoremap ;M <cr>:m''-1<cr>
+cnoremap ;d <cr>dd<cr>''
 
 " commands
 command! ClearReg for i in range(34,122) | silent!
