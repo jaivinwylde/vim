@@ -24,7 +24,7 @@ set nobackup
 set nowritebackup
 set nocompatible
 
-let g:polyglot_disabled = ["autoindent"]
+" let g:polyglot_disabled = ["autoindent"]
 let mapleader = " "
 let g:gruvbox_contrast_dark = "hard"
 
@@ -51,6 +51,7 @@ highlight Normal guibg=none ctermbg=none
 
 " maps
 nnoremap <leader>ps :Files<cr>
+nnoremap <leader>pb :Buffer<cr>
 nnoremap <leader>pg :Ag<cr>
 nmap <leader>rn <plug>(coc-rename)
 nmap [g <plug>(coc-diagnostic-prev)
