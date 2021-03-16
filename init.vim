@@ -1,4 +1,5 @@
 " sets
+set termguicolors
 set pumheight=5
 set tabstop=4
 set softtabstop=4
@@ -24,7 +25,6 @@ set nobackup
 set nowritebackup
 set nocompatible
 
-" let g:polyglot_disabled = ["autoindent"]
 let mapleader = " "
 let g:gruvbox_contrast_dark = "hard"
 
@@ -32,9 +32,10 @@ let g:gruvbox_contrast_dark = "hard"
 call plug#begin("~/.config/nvim/plugins")
 Plug 'ThePrimeagen/vim-be-good'
 
+Plug 'sainnhe/gruvbox-material'
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
-Plug 'sheerun/vim-polyglot'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
@@ -45,9 +46,17 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-" color scheme
-colorscheme gruvbox
-highlight Normal guibg=none ctermbg=none
+" lua
+lua <<EOF
+require"nvim-treesitter.configs".setup {
+    highlight = {
+        enable = true
+    },
+    indent = {
+        enable = true
+    }
+}
+EOF
 
 " maps
 nnoremap <leader>ps :Files<cr>
@@ -73,6 +82,16 @@ cnoremap ;d <cr>dd<cr>''
 " commands
 command! ClearReg for i in range(34,122) | silent!
             \ call setreg(nr2char(i), []) | endfor
+
+" augroups
+augroup highlight_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=300}
+augroup END
+
+" color scheme
+colorscheme gruvbox
+highlight Normal guibg=c1c1c1
 
 " sources
 source $HOME/.config/nvim/plugins/config/coc.vim
