@@ -11,8 +11,6 @@ set guicursor=
 set updatetime=300
 set expandtab
 set smartindent
-set autoindent
-set cindent
 set relativenumber
 set nu
 set nohlsearch
@@ -34,10 +32,11 @@ let g:gruvbox_contrast_dark = "hard"
 call plug#begin("~/.config/nvim/plugins")
 Plug 'ThePrimeagen/vim-be-good'
 
-Plug 'sainnhe/gruvbox-material'
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+Plug 'Vimjas/vim-python-pep8-indent'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
