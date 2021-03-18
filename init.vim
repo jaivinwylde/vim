@@ -1,4 +1,4 @@
-" sets
+" Sets
 set termguicolors
 set pumheight=5
 set tabstop=4
@@ -11,6 +11,8 @@ set guicursor=
 set updatetime=300
 set expandtab
 set smartindent
+set autoindent
+set cindent
 set relativenumber
 set nu
 set nohlsearch
@@ -28,7 +30,7 @@ set nocompatible
 let mapleader = " "
 let g:gruvbox_contrast_dark = "hard"
 
-" plugins
+" Plugins
 call plug#begin("~/.config/nvim/plugins")
 Plug 'ThePrimeagen/vim-be-good'
 
@@ -46,7 +48,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
-" lua
+" Lua
 lua <<EOF
 require"nvim-treesitter.configs".setup {
     highlight = {
@@ -55,7 +57,7 @@ require"nvim-treesitter.configs".setup {
 }
 EOF
 
-" maps
+" Maps
 nnoremap <leader>ps :Files<cr>
 nnoremap <leader>pb :Buffer<cr>
 nnoremap <leader>pg :Ag<cr>
@@ -76,19 +78,19 @@ cnoremap ;m <cr>:m''<cr>
 cnoremap ;M <cr>:m''-1<cr>
 cnoremap ;d <cr>dd<cr>''
 
-" commands
+" Commands
 command! ClearReg for i in range(34,122) | silent!
             \ call setreg(nr2char(i), []) | endfor
 
-" augroups
+" Augroups
 augroup highlight_yank
     autocmd!
     au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=300}
 augroup END
 
-" color scheme
+" Color scheme
 colorscheme gruvbox
 highlight Normal guibg=c1c1c1
 
-" sources
+" Sources
 source $HOME/.config/nvim/plugins/config/coc.vim
