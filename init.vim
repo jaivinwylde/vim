@@ -33,6 +33,7 @@ call plug#begin("~/.config/nvim/plugins")
 Plug 'ThePrimeagen/vim-be-good'
 
 Plug 'gruvbox-community/gruvbox'
+Plug 'norcalli/nvim-colorizer.lua'
 Plug 'vim-airline/vim-airline'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
@@ -56,6 +57,8 @@ require"nvim-treesitter.configs".setup {
 }
 EOF
 
+lua require'colorizer'.setup()
+
 " Maps
 nnoremap <leader>ps :Files<cr>
 nnoremap <leader>pb :Buffer<cr>
@@ -71,8 +74,8 @@ nmap <leader>gs :G<cr>
 
 nnoremap <leader>sc :set spell<cr> z= 1<cr> :set nospell<cr>
 
-cnoremap ;t <cr>:t''<cr>
-cnoremap ;T <cr>:t''-1<cr>
+cnoremap ;p <cr>:t''<cr>
+cnoremap ;P <cr>:t''-1<cr>
 cnoremap ;m <cr>:m''<cr>
 cnoremap ;M <cr>:m''-1<cr>
 cnoremap ;d <cr>dd<cr>''
