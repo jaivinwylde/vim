@@ -58,8 +58,6 @@ require"nvim-treesitter.configs".setup {
 }
 EOF
 
-lua require'colorizer'.setup()
-
 " Maps
 nnoremap <leader>ps :Files<cr>
 nnoremap <leader>pb :Buffer<cr>
