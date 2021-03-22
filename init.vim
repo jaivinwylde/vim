@@ -74,7 +74,7 @@ nmap <leader>gi <plug>(coc-implementation)
 nmap <leader>gr <plug>(coc-references)
 nmap <leader>gs :G<cr>
 
-nnoremap <leader>sc :set spell<cr>z= 1<cr>:set nospell<cr>
+nnoremap <leader>sc :set spell<cr> z= 1<cr> :set nospell<cr>
 
 cnoremap ;c <cr>:t''<cr>
 cnoremap ;C <cr>:t''-1<cr>
