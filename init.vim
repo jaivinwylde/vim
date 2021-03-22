@@ -24,6 +24,7 @@ set noswapfile
 set nobackup
 set nowritebackup
 set nocompatible
+set mouse=a
 
 let mapleader = " "
 let g:gruvbox_contrast_dark = "hard"
@@ -104,4 +105,4 @@ highlight Normal guibg=#1c1c1c
 highlight link markdownError Normal
 
 " Sources
-source $HOME/.config/nvim/plugins/config/coc.vim
+source $HOME/.config/nvim/config/coc.vim
