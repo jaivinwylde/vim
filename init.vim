@@ -27,6 +27,7 @@ set nocompatible
 
 let mapleader = " "
 let g:gruvbox_contrast_dark = "hard"
+let g:qs_highlight_on_keys = ["f", "F", "t", "T"]
 
 " Plugins
 call plug#begin("~/.config/nvim/plugins")
@@ -39,6 +40,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'Vimjas/vim-python-pep8-indent'
 
+Plug 'unblevable/quick-scope'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
