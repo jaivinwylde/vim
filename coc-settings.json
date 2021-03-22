@@ -11,6 +11,10 @@
     ],
     "python.pythonPath": "python3",
     "pyright.disableDiagnostics": true,
+    "python.formatting.provider": "yapf",
+    "python.formatting.yapfArgs": [
+        "--style pep8"
+    ],
     "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": true,
     "diagnostic.showUnused": false
