@@ -53,8 +53,7 @@ call plug#end()
 lua <<EOF
 require"nvim-treesitter.configs".setup {
     highlight = {
-        enable = true,
-        disable = { "markdown" }
+        enable = true
     }
 }
 EOF
@@ -99,6 +98,8 @@ augroup END
 " Color scheme
 colorscheme gruvbox
 highlight Normal guibg=#1c1c1c
+
+highlight link markdownError Normal
 
 " Sources
 source $HOME/.config/nvim/plugins/config/coc.vim
