@@ -34,7 +34,6 @@ call plug#begin("~/.config/nvim/plugins")
 Plug 'ThePrimeagen/vim-be-good'
 
 Plug 'gruvbox-community/gruvbox'
-Plug 'norcalli/nvim-colorizer.lua'
 Plug 'vim-airline/vim-airline'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
