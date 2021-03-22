@@ -63,6 +63,8 @@ nnoremap <leader>ps :Files<cr>
 nnoremap <leader>pb :Buffer<cr>
 nnoremap <leader>pg :Ag<cr>
 nmap <leader>rn <plug>(coc-rename)
+xmap <leader>a <plug>(coc-codeaction-selected)
+nmap <leader>a <plug>(coc-codeaction-selected)
 nmap [g <plug>(coc-diagnostic-prev)
 nmap ]g <plug>(coc-diagnostic-next)
 nmap <leader>gd <plug>(coc-definition)
