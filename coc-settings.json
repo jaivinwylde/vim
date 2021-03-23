@@ -15,7 +15,7 @@
     "python.formatting.yapfArgs": [
         "--style pep8"
     ],
-    "python.linting.flake8Enabled": false,
+    "python.linting.flake8Enabled": true,
     "python.linting.mypyEnabled": false,
     "diagnostic.showUnused": false
 }

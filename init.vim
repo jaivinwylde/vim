@@ -11,6 +11,7 @@ set guicursor=
 set updatetime=300
 set expandtab
 set smartindent
+set autoindent
 set relativenumber
 set nu
 set nohlsearch
@@ -30,7 +31,6 @@ let mapleader = " "
 let b:coc_suggest_disable = 1
 let g:gruvbox_contrast_dark = "hard"
 let g:qs_highlight_on_keys = ["f", "F", "t", "T"]
-let g:polyglot_disabled = ["autoindent"]
 
 " Plugins
 call plug#begin("~/.config/nvim/plugins")
@@ -58,8 +58,8 @@ nnoremap <leader>pg :Ag<cr>
 nmap <leader>rn <plug>(coc-rename)
 xmap <leader>a <plug>(coc-codeaction-selected)
 nmap <leader>a <plug>(coc-codeaction-selected)
-nmap [g <plug>(coc-diagnostic-prev)
-nmap ]g <plug>(coc-diagnostic-next)
+nmap [g <plug>(coc-diagnostic-prev-error)
+nmap ]g <plug>(coc-diagnostic-next-error)
 nmap <leader>gd <plug>(coc-definition)
 nmap <leader>gy <plug>(coc-type-definition)
 nmap <leader>gi <plug>(coc-implementation)
