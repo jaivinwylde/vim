@@ -31,6 +31,7 @@ let mapleader = " "
 let b:coc_suggest_disable = 1
 let g:gruvbox_contrast_dark = "hard"
 let g:qs_highlight_on_keys = ["f", "F", "t", "T"]
+let g:python_highlight_space_errors = 0
 
 " Plugins
 call plug#begin("~/.config/nvim/plugins")
@@ -39,9 +40,7 @@ Plug 'ThePrimeagen/vim-be-good'
 Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
-Plug 'Vimjas/vim-python-pep8-indent'
 
-Plug 'jiangmiao/auto-pairs'
 Plug 'unblevable/quick-scope'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
@@ -95,7 +94,8 @@ augroup END
 colorscheme gruvbox
 highlight Normal guibg=#1c1c1c
 
-highlight link markdownError Normal
+syntax match pythonComment "#.*$" display contains=pythonTodo
+syntax keyword pythonTodo TODO FIXME XXX HACK BUG NOTE TBD contained 
 
 " Sources
 source $HOME/.config/nvim/config/coc.vim
