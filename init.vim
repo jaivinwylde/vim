@@ -41,6 +41,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
 Plug 'Vimjas/vim-python-pep8-indent'
 
+Plug 'jiangmiao/auto-pairs'
 Plug 'unblevable/quick-scope'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
