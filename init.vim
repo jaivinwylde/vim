@@ -28,7 +28,6 @@ set nocompatible
 set mouse=a
 
 let mapleader = " "
-let b:coc_suggest_disable = 1
 let g:gruvbox_contrast_dark = "hard"
 let g:qs_highlight_on_keys = ["f", "F", "t", "T"]
 let g:python_highlight_space_errors = 0
