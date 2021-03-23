@@ -41,6 +41,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'sheerun/vim-polyglot'
 
+Plug 'tmsvg/pear-tree'
 Plug 'unblevable/quick-scope'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
@@ -93,9 +94,6 @@ augroup END
 " Color scheme
 colorscheme gruvbox
 highlight Normal guibg=#1c1c1c
-
-syntax match pythonComment "#.*$" display contains=pythonTodo
-syntax keyword pythonTodo TODO FIXME XXX HACK BUG NOTE TBD contained 
 
 " Sources
 source $HOME/.config/nvim/config/coc.vim
