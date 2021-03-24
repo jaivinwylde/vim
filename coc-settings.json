@@ -10,12 +10,15 @@
         "python"
     ],
     "python.pythonPath": "python3",
-    "pyright.disableDiagnostics": false,
+    "pyright.disableDiagnostics": true,
     "python.formatting.provider": "yapf",
     "python.formatting.yapfArgs": [
-        "--style pep8"
+        "--style $HOME/.config/nvim/config/.style.yapf"
     ],
     "python.linting.flake8Enabled": true,
-    "python.linting.mypyEnabled": false,
+    "python.linting.flake8Args": [
+        "--ignore=F405,F403"
+    ],
+    "python.linting.mypyEnabled": true,
     "diagnostic.showUnused": false
 }
