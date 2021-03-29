@@ -55,6 +55,13 @@ call plug#end()
 nnoremap <leader>ps :Files<cr>
 nnoremap <leader>pb :Buffer<cr>
 nnoremap <leader>pg :Ag<cr>
+nnoremap <leader>gs :G<cr>
+nnoremap <leader>sp :set spell!<cr>
+cnoremap ;c <cr>:t''<cr>
+cnoremap ;C <cr>:t''-1<cr>
+cnoremap ;m <cr>:m''<cr>
+cnoremap ;M <cr>:m''-1<cr>
+cnoremap ;d <cr>dd<cr>''
 nmap <leader>rn <plug>(coc-rename)
 xmap <leader>a <plug>(coc-codeaction-selected)
 nmap <leader>a <plug>(coc-codeaction-selected)
@@ -64,15 +71,6 @@ nmap <leader>gd <plug>(coc-definition)
 nmap <leader>gy <plug>(coc-type-definition)
 nmap <leader>gi <plug>(coc-implementation)
 nmap <leader>gr <plug>(coc-references)
-nmap <leader>gs :G<cr>
-
-nnoremap <leader>sp :set spell!<cr>
-
-cnoremap ;c <cr>:t''<cr>
-cnoremap ;C <cr>:t''-1<cr>
-cnoremap ;m <cr>:m''<cr>
-cnoremap ;M <cr>:m''-1<cr>
-cnoremap ;d <cr>dd<cr>''
 
 " Commands
 command! ClearReg for i in range(34,122) | silent!
