@@ -25,8 +25,7 @@
     "python.linting.mypyArgs": [
         "--strict",
         "--strict-equality",
-        "--strict-optional",
-        "--ignore-missing-imports",
+        "--no-strict-optional",
         "--ignore-missing-imports",
         "--follow-imports=silent",
         "--show-column-numbers"
