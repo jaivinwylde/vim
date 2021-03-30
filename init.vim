@@ -10,7 +10,7 @@ set signcolumn=yes
 set guicursor=
 set updatetime=300
 set expandtab
-set smartindent
+set nosmartindent
 set autoindent
 set relativenumber
 set nu
@@ -31,6 +31,11 @@ let mapleader = " "
 let g:gruvbox_contrast_dark = "hard"
 let g:qs_highlight_on_keys = ["f", "F", "t", "T"]
 let g:python_highlight_space_errors = 0
+let g:ale_fixers = {"*": ["remove_trailing_lines", "trim_whitespace"], "python": ["black"]}
+let g:ale_python_black_options = "--line-length=79"
+let g:ale_disable_lsp = 1
+let g:ale_linters_explicit = 1
+let g:ale_fix_on_save = 1
 
 " Plugins
 call plug#begin("~/.config/nvim/plugins")
@@ -49,6 +54,7 @@ Plug 'tpope/vim-repeat'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'dense-analysis/ale'
 call plug#end()
 
 " Maps
