@@ -57,6 +57,7 @@ nnoremap <leader>pb :Buffer<cr>
 nnoremap <leader>pg :Ag<cr>
 nnoremap <leader>gs :G<cr>
 nnoremap <leader>sp :set spell!<cr>
+nnoremap <cr> i<cr><esc>l
 cnoremap ;c <cr>:t''<cr>
 cnoremap ;C <cr>:t''-1<cr>
 cnoremap ;m <cr>:m''<cr>
